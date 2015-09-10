@@ -1,0 +1,31 @@
+doctype html
+
+html
+  head
+    link(rel='stylesheet', href='/css/widget.css')
+    link(rel='stylesheet', href='/test/css/widget.css')
+    script(src='/js/widget.js')
+    script(src='/test/js/widget.js')
+
+  body
+    nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          a.navbar-brand Partner Site
+    block content
+
+    .container-fluid
+      h3 partner site content...
+
+    .container-fluid
+      hr
+      .row
+        .col-md-8
+          a(href='#') Terms of Service
+          |  |&nbsp;
+          a(href='#') Privacy Policy
+          |  |&nbsp;
+        .col-md-4
+          p.muted.pull-right © 2015 Partner Name. All rights reserved
+
+

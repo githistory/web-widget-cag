@@ -1,0 +1,25 @@
+doctype html
+
+html
+  head
+    // master library css
+    link(rel='stylesheet', href='/css/widget.css')
+    // project css
+    link(rel='stylesheet', href='/test/css/widget.css')
+    // master library js
+    script(src='/js/widget.js')
+    // project js
+    script(src='/test/js/widget.js')
+
+  body(ng-app='widget.cag.test')
+    div.container-fluid(ng-controller='test')
+      h3 Progress Bar
+      hr
+      // one line of code to use the directive exposed by master library
+      cag-progress(theme='warning', value='progress.value', steps='progress.steps')
+      .form-inline
+        .form-group
+          label Change Progress
+          input.form-control(type='number', max='{{max}}', min='0', ng-model='progress.value')
+
+
