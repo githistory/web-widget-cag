@@ -1,0 +1,6 @@
+.cgg-checkbox
+  .form-group
+    label.checkbox-inline {{label}}
+      input(type='checkbox', value='{{defaultValue}}', ng-model='inputValue').form-control
+      | {{labelName}}
+  p(ng-bind="inputValue")
