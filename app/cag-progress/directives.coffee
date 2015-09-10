@@ -18,14 +18,4 @@ angular.module 'widget.cag'
       _.each $scope.sortedSteps, (step)->
         step.color = if value<step.value then $scope.theme else $scope.theme+'-major'
 
-    $scope.$watch 'value', (nv)=>
-      $scope.refreshSteps(nv)
-
   link: ($scope, element, attrs)->
-
-
-
-
-
-
-
