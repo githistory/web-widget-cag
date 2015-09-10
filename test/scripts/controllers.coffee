@@ -1,7 +1,6 @@
 angular.module 'widget.cag.test'
 
 .controller 'test', ($scope)->
-  console.log 'test'
   $scope.progress =
     value: 50
     steps: [
