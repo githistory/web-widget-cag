@@ -12,3 +12,6 @@ angular.module 'widget.cgg.test', [
   .state 'step2',
     url: "/step2",
     templateUrl: "step2.html"
+  .state 'step3',
+    url: "/step3",
+    templateUrl: "step3.html"

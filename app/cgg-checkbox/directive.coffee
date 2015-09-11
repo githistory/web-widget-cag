@@ -10,10 +10,8 @@ angular.module 'widget.cgg'
     labelName: '@'
 
   controller: ($scope)->
-    console.log($scope.labelName)
     $scope.label = $scope.label || ''
     $scope.defaultValue = $scope.defaultValue || false
-    $scope.labelName = $scope.labelName || 'wtf'
-    console.log($scope.labelName)
+    $scope.labelName = $scope.labelName || 'emptyLabel'
 
   link: ($scope, element, attrs)->

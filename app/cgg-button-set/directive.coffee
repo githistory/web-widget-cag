@@ -7,3 +7,10 @@ angular.module 'widget.cgg'
   scope:
     previous: '@'
     next: '@'
+    progressValue: '='
+
+  controller: ($scope)->
+    if ($scope.next == 'submit')
+      $scope.buttonTitleNext = 'submit'
+    else
+      $scope.buttonTitleNext = 'next'
