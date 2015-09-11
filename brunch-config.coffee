@@ -32,7 +32,7 @@ exports.config =
     ng_annotate:
       pattern: /^app/
     angularTemplate:
-      moduleName: 'widget.cag'
+      moduleName: 'widget.cgg'
       pathToSrc: (old)->
         old.replace(/\.jade$/, '')
       ignore: [/^.*\.static\.jade/]

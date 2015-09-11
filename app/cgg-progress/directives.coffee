@@ -1,9 +1,9 @@
-angular.module 'widget.cag'
+angular.module 'widget.cgg'
 
-.directive 'cagProgress', (_)->
+.directive 'cggProgress', (_)->
   restrict: 'AE'
   replace: true
-  templateUrl: 'cag-progress/template'
+  templateUrl: 'cgg-progress/template'
   scope:
     value: '='
     steps: '='

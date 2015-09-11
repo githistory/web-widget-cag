@@ -1,5 +1,5 @@
-angular.module 'widget.cag.test', [
-  'widget.cag'
+angular.module 'widget.cgg.test', [
+  'widget.cgg'
 ]
 
 .config ()->

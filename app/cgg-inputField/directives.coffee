@@ -1,4 +1,4 @@
-angular.module 'widget.cag'
+angular.module 'widget.cgg'
 
 .directive 'cggInputField', (_)->
   restrict: 'AE'

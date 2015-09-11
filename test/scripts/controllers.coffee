@@ -1,4 +1,4 @@
-angular.module 'widget.cag.test'
+angular.module 'widget.cgg.test'
 
 .controller 'test', ($scope)->
   $scope.progress =
