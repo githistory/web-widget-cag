@@ -7,8 +7,3 @@ angular.module 'widget.cgg'
   scope:
     previous: '@'
     next: '@'
-
-  controller: ($scope)->
-
-
-  link: ($scope, element, attrs)->

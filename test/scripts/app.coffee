@@ -1,6 +1,14 @@
 angular.module 'widget.cgg.test', [
-  'widget.cgg'
+  'widget.cgg',
+  'ui.router'
 ]
 
-.config ()->
-
+.config ($stateProvider, $urlRouterProvider) ->
+  $urlRouterProvider.otherwise("/step1")
+  $stateProvider
+  .state 'step1',
+    url: "/step1",
+    templateUrl: "step1.html"
+  .state 'step2',
+    url: "/step2",
+    templateUrl: "step2.html"

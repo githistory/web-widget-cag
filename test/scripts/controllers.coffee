@@ -8,10 +8,10 @@ angular.module 'widget.cgg.test'
       value: 0
     ,
       icon: 'gift'
-      value: 30
+      value: 33
     ,
       icon: 'fire'
-      value: 50
+      value: 66
     ,
       icon: 'check'
       value: 100

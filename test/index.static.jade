@@ -13,18 +13,12 @@ html
 
   body(ng-app='widget.cgg.test')
     div.container-fluid(ng-controller='test')
-      h3 Progress Bar
-      hr
+      h3 Header
       // one line of code to use the directive exposed by master library
-      cgg-progress(theme='warning', value='progress.value', steps='progress.steps')
       .form-inline
         .form-group
           label Change Progress
-          input.form-control(type='number', max='{{max}}', min='0', ng-model='progress.value')
+      input.form-control(type='number', max='{{max}}', min='0', ng-model='progress.value')
 
-      h3 Input bar testing
-      cgg-input-field(label='Test label', placeholder='Test placeholder')
-      cgg-checkbox(label='Test Label Checkbox', label-name="Text LabelName Checkbox")
-      cgg-button-set(previous='', next='#step2')
-
-
+      cgg-progress(theme='warning', value='progress.value', steps='progress.steps')
+      ui-view
