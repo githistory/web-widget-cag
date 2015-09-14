@@ -14,7 +14,7 @@ angular.module 'widget.cgg'
     $scope.value = Math.min $scope.value, $scope.max
 
     $scope.refreshSteps = (value)->
-      unless value then return
+      unless typeof value is 'number' then return
       _.each $scope.sortedSteps, (step)->
         step.color = if value<step.value then $scope.theme else $scope.theme+'-major'
 

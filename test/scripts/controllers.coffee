@@ -2,7 +2,7 @@ angular.module 'widget.cgg.test'
 
 .controller 'test', ($scope, $state, $rootScope)->
   $scope.progress =
-    value: 1
+    value: 0
     steps: [
       icon: 'tint'
       value: 0
