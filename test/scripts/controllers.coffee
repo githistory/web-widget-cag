@@ -23,10 +23,12 @@ angular.module 'widget.cgg.test'
       when "step1" then $scope.progress.value = 0
       when "step2" then $scope.progress.value = 33
       when "step3" then $scope.progress.value = 66
-      else $scope.progress.value = 100
+      when "step4" then $scope.progress.value = 100
+      else $scope.progress.value = 0
 
   $scope.$watch 'value', (nv)=>
     $scope.refreshSteps(nv)
+
 
 .controller 'w1', ($scope)->
   console.log 'w1'

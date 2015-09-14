@@ -7,6 +7,7 @@ angular.module 'widget.cgg'
   scope:
     label: '@'
     placeholder: '@'
+    isRequired : '@'
 
   controller: ($scope)->
     $scope.label = $scope.label || 'No label name'

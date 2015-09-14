@@ -1,4 +1,16 @@
-h3 form1
-cgg-input-field(label='Test label', placeholder='Test placeholder')
-cgg-checkbox(label='Test Label Checkbox', label-name="Text LabelName Checkbox")
-cgg-button-set(next='step2')
+h3 step1
+form(name='step1', novalidate, role='form')
+  .form-group
+    label Firstname
+    input(type='text', placeholder='firstname', ng-model='firstname', required).form-control
+  .form-group
+    label Lastname
+    input(type='text', placeholder='lastname', ng-model='step1.lastname', required).form-control
+  .form-group
+    label Age
+    input(type='text', placeholder='26', ng-model='step1.age', required).form-control
+
+cgg-button-set(next='step2', form-complete='step1.$valid')
+
+  cgg-input-field(label='Firstname', placeholder='Jack', isRequired='true')
+  cgg-input-field(label='Lastname', placeholder='Xie', isRequired='true')
