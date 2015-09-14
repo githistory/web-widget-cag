@@ -1,4 +1,4 @@
-angular.module 'widget.cgg.test', [
+angular.module 'widget.cgg.demo', [
   'widget.cgg',
   'ui.router'
 ]

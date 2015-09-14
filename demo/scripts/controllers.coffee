@@ -1,6 +1,6 @@
-angular.module 'widget.cgg.test'
+angular.module 'widget.cgg.demo'
 
-.controller 'test', ($scope, $state, $rootScope)->
+.controller 'demo', ($scope, $state, $rootScope)->
   $scope.progress =
     value: 0
     steps: [
@@ -29,9 +29,12 @@ angular.module 'widget.cgg.test'
   $scope.$watch 'value', (nv)=>
     $scope.refreshSteps(nv)
 
-
-.controller 'w1', ($scope)->
-  console.log 'w1'
-
-.controller 'w2', ($scope)->
-  console.log 'w2'
+.controller 'step1', ($scope, $rootScope)->
+  $scope.$watch 'step1.firstname', ->
+    $rootScope.firstname = $scope.step1.firstname
+  $scope.$watch 'step1.lastname', ->
+    $rootScope.lastname = $scope.step1.lastname
+  $scope.$watch 'step1.age', ->
+    $rootScope.age = $scope.step1.age
+  $scope.$watch 'email', ->
+    $rootScope.email = $scope.email

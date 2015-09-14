@@ -3,13 +3,14 @@ exports.config =
     wrapper: false
   paths:
     public: './dist'
+    watched: ['app', 'demo']
   conventions:
     assets: /^app\/assets/
   files:
     javascripts:
       joinTo:
         'js/widget.js': /^(app|bower_components)/
-        'test/js/widget.js': /^test/
+        'demo/js/widget.js': /^demo/
       order:
         after: [
           'app/scripts/**/*.coffee'
@@ -18,11 +19,11 @@ exports.config =
     stylesheets:
       joinTo:
         'css/widget.css': /^(app|bower_components)/
-        'test/css/widget.css': /^test/
+        'demo/css/widget.css': /^demo/
     templates:
       joinTo:
         'js/widget.js': /^app/
-        'test/js/widget.js': /^test/
+        'demo/js/widget.js': /^demo/
       order:
         after: [
           'app/**/*.jade'

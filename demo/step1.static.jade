@@ -1,0 +1,31 @@
+.step1WrapperClass(ng-controller='step1')
+  form(name='step1', novalidate, role='form')
+    .form-group
+      label Firstname
+      input(type='text', placeholder='firstname', ng-model='step1.firstname', required, ng-change='randomFunc(step1.firstname)').form-control
+
+    .form-group
+      label Lastname
+      input(type='text', placeholder='lastname', ng-model='step1.lastname', required).form-control
+
+    .form-group
+      label Age
+      input(type='text', placeholder='26', ng-model='step1.age', required).form-control
+
+    .form-group
+      label Your email address
+        a.glyphicon.glyphicon-info-sign
+      input(type='email', ng-model='email', name="email", required).form-control.pod-lock-image
+
+      div.alert.alert-danger(ng-show='step1.email.$error.required', role='alert')
+        span.glyphicon.glyphicon-alert(aria-hidden='true') Email required
+        span.sr-only Error:
+          | Email required
+      div.help-inline(ng-show='step1.email.$error.email', role='alert')
+        span.glyphicon.glyphicon-alert(aria-hidden='true')
+        span.sr-only Error:
+          | Enter a valid email address
+
+  button.btn.btn-primary(ng-click='randomFunc()') Console Log email object
+
+  cgg-button-set(next='step2', form-complete='step1.$valid')

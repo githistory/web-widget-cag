@@ -1,0 +1,30 @@
+doctype html
+
+html
+  head
+    // master library css
+    link(rel='stylesheet', href='/css/widget.css')
+    // project css
+    link(rel='stylesheet', href='/demo/css/widget.css')
+    // master library js
+    script(src='/js/widget.js')
+    // project js
+    script(src='/demo/js/widget.js')
+
+  body(ng-app='widget.cgg.demo')
+    div.container(ng-controller='demo')
+      div.row
+        // one line of code to use the directive exposed by master library
+        div.col-md-7.col-sm-12.col-xs-12
+          //.form-inline
+            .form-group
+              label Change Progress
+          //input.form-control(type='number', max='{{max}}', min='0', ng-model='progress.value')
+          cgg-progress(theme='warning', value='progress.value', steps='progress.steps')
+          ui-view
+        div.col-md-5.col-sm-4.hidden-sm.hidden-xs
+           h4 Form data results
+           p(ng-show='firstname != Undefined') Firstname: {{firstname}}
+           p(ng-show='lastname != Undefined') Lastname: {{lastname}}
+           p(ng-show='age != Undefined') Age: {{age}}
+           p(ng-show='email != Undefined') Email: {{email}}
