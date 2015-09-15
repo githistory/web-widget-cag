@@ -1,4 +1,7 @@
-h3 step2
-cgg-input-field(label='Test label', placeholder='Test placeholder')
-cgg-input-field(label='Test label', placeholder='Test placeholder')
-cgg-button-set(previous='step1', next='step3')
+.step2WrapperClass(ng-controller='step2')
+  form(name='step2', novalidate, role='form')
+    cgg-input-field(label='Test label', placeholder='Test placeholder', is-required='true', ng-model="$root.field1")
+    cgg-input-field(label='Test label', placeholder='Test placeholder', is-required='true', ng-model='$root.field2', display-lock="true")
+
+    p {{step2.field1}} {{step2.field2}}
+    cgg-button-set(previous='step1', next='step3', form-complete='step2.$valid')

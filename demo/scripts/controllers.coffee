@@ -30,11 +30,18 @@ angular.module 'widget.cgg.demo'
     $scope.refreshSteps(nv)
 
 .controller 'step1', ($scope, $rootScope)->
-  $scope.$watch 'step1.firstname', ->
-    $rootScope.firstname = $scope.step1.firstname
-  $scope.$watch 'step1.lastname', ->
-    $rootScope.lastname = $scope.step1.lastname
-  $scope.$watch 'step1.age', ->
-    $rootScope.age = $scope.step1.age
+  $scope.$watch 'firstname', ->
+    $rootScope.firstname = $scope.firstname
+  $scope.$watch 'lastname', ->
+    $rootScope.lastname = $scope.lastname
+  $scope.$watch 'age', ->
+    $rootScope.age = $scope.age
   $scope.$watch 'email', ->
     $rootScope.email = $scope.email
+
+.controller 'step2', ($scope, $rootScope)->
+#  $rootScope.step2 =
+#    field1: '1'
+#    field2: '2'
+#  console.log($scope.step2)
+#  $scope.step2 = $rootScope.step2 = {}

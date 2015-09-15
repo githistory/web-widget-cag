@@ -23,8 +23,13 @@ html
           cgg-progress(theme='warning', value='progress.value', steps='progress.steps')
           ui-view
         div.col-md-5.col-sm-4.hidden-sm.hidden-xs
-           h4 Form data results
-           p(ng-show='firstname != Undefined') Firstname: {{firstname}}
-           p(ng-show='lastname != Undefined') Lastname: {{lastname}}
-           p(ng-show='age != Undefined') Age: {{age}}
-           p(ng-show='email != Undefined') Email: {{email}}
+          h4 Form data results
+          p(ng-show='firstname != Undefined') Firstname: {{firstname}}
+          p(ng-show='lastname != Undefined') Lastname: {{lastname}}
+          p(ng-show='age != Undefined') Age: {{age}}
+          p(ng-show='email != Undefined') Email: {{email}}
+          p(ng-show='field1 != Undefined') field1: {{field1}}
+          p(ng-show='field2 != Undefined') field2: {{field2}}
+
+          include snippets/trust_block.static.jade
+

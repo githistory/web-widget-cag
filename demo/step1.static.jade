@@ -2,15 +2,15 @@
   form(name='step1', novalidate, role='form')
     .form-group
       label Firstname
-      input(type='text', placeholder='firstname', ng-model='step1.firstname', required, ng-change='randomFunc(step1.firstname)').form-control
+      input(type='text', placeholder='firstname', ng-model='firstname', required).form-control
 
     .form-group
       label Lastname
-      input(type='text', placeholder='lastname', ng-model='step1.lastname', required).form-control
+      input(type='text', placeholder='lastname', ng-model='lastname', required).form-control
 
     .form-group
       label Age
-      input(type='text', placeholder='26', ng-model='step1.age', required).form-control
+      input(type='text', placeholder='26', ng-model='age', required).form-control
 
     .form-group
       label Your email address
@@ -25,7 +25,5 @@
         span.glyphicon.glyphicon-alert(aria-hidden='true')
         span.sr-only Error:
           | Enter a valid email address
-
-  button.btn.btn-primary(ng-click='randomFunc()') Console Log email object
 
   cgg-button-set(next='step2', form-complete='step1.$valid')
