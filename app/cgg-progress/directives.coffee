@@ -8,6 +8,7 @@ angular.module 'widget.cgg'
     value: '='
     steps: '='
     theme: '@'
+
   controller: ($scope)->
     $scope.sortedSteps = _.sortBy $scope.steps, 'value'
     $scope.max = $scope.sortedSteps[$scope.steps.length-1].value

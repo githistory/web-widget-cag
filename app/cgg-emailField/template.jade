@@ -1,0 +1,11 @@
+cgg-emailField(ng-form='emailform')
+  .form-group
+    label Your email address
+      a(ng-if='displayInfo', ng-click='toggleNotification()').glyphicon.glyphicon-info-sign
+      .alert.alert-info(role='alert', ng-show='notification')
+        {{info}}
+    input(type='email', ng-model='email', name="email", required).form-control
+    div.alert.alert-danger(ng-show='emailform.email.$error.email', role='alert')
+      span.glyphicon.glyphicon-alert(aria-hidden='true') Incorrect email format
+      span.sr-only Error:
+        | Enter a valid email address
