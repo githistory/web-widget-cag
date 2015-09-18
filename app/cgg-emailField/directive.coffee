@@ -20,6 +20,7 @@ angular.module 'widget.cgg'
     $scope.displayLock = angular.isDefined($scope.displayLock) ? true || false
     $scope.displayInfo = angular.isDefined($scope.info) ? true || false
     $scope.errorShowUp == 'true' ? true : false
+    $scope.formName = 'form' + $scope.$id
 
   link: (scope, element, attrs, ngModel)->
     unless ngModel then return
